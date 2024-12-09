@@ -45,7 +45,7 @@
                     <td class="px-6 py-4">{{ $medication->dosage }}</td>
                     <td class="px-6 py-4">
                         <x-danger-button wire:click='delete({{ $medication->id }})'>Eliminar</x-danger-button>
-                        <x-button class="text-orange-600 active:bg-orange-400 bg-white hover:bg-orange-300 border-orange-600 border-2" wire:click='edit({{$medication->id}})'>Editar</x-button>
+                        <x-button class="text-white bg-gray-600 hover:bg-orange-400 active:bg-orange-500 border-orange-600 border-2" wire:click='edit({{$medication->id}})'>Editar</x-button>
                     </td>
                 </tr>
                 @endforeach
