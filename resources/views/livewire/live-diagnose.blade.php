@@ -19,11 +19,7 @@
             <div class="flex items-center space-x-4">
                 <button wire:click="$set('modalC', true)" class="px-3 py-2 text-sm bg-gray-200 hover:bg-gray-300 rounded">Crear</button>
                 <div class="relative">
-                    <input type="search"
-                           wire:model.debounce.300ms="search"
-                           class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                           placeholder="Buscar diagnósticos..."/>
-                    </div>
+                    <x-input name="search-category" placeholder="Busqueda" wire:model.live='search' />
                 </div>
             </div>
         </div>
@@ -68,7 +64,7 @@
                     <x-label class="w-full" for="description" value="Descripción"/>
                     <x-input class="w-full" name="description" wire:model='Edit.description'/>
                     <x-danger-button class="mt-2" wire:click="$set('modalE', false)">Cancelar</x-danger-button>
-                    <x-button class="mt-2">Actualizar</x-button>
+                    <x-button class="mt-2 ">Actualizar</x-button>
                 </form>
             </div>
         </div>

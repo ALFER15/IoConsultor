@@ -21,11 +21,7 @@
             <div class="flex items-center space-x-4">
                 <button wire:click="$set('modalC', true)" class="px-3 py-2 text-sm bg-gray-200 hover:bg-gray-300 rounded">Crear</button>
                 <div class="relative">
-                    <input type="search"
-                           wire:model.debounce.300ms="search"
-                           class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                           placeholder="Buscar medicaciones..."/>
-                    </div>
+                    <x-input name="search-category" placeholder="Busqueda" wire:model.live='search' />
                 </div>
             </div>
         </div>
@@ -49,7 +45,7 @@
                     <td class="px-6 py-4">{{ $medication->dosage }}</td>
                     <td class="px-6 py-4">
                         <x-danger-button wire:click='delete({{ $medication->id }})'>Eliminar</x-danger-button>
-                        <x-button class="text-orange-600 active:bg-orange-400 bg-white hover:bg-orange-300 border-orange-600 border-2" wire:click='edit({{ $medication->id }})'>Editar</x-button>
+                        <x-button class="text-orange-600 active:bg-orange-400 bg-white hover:bg-orange-300 border-orange-600 border-2" wire:click='edit({{$medication->id}})'>Editar</x-button>
                     </td>
                 </tr>
                 @endforeach
