@@ -13,8 +13,8 @@
         <div class="md:w-1/2 space-y-4">
             <a
                                         href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-[#FF2D20] focus:outline-none focus-visible:ring-[#FF2D20] dark:text-black dark:hover:text-[#FF2D20] dark:focus-visible:ring-[#FF2D20]"
+                                        >
                                         Entra a la web
                                     </a>
             <span class="block bg-black text-white px-4 py-1 text-sm font-semibold rounded-full">
